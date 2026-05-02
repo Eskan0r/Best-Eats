@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Best Eats",
+    "slug": "best-eats",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#5A2328"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.team7llc.besteats",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Best Eats needs your location to show nearby restaurants."
+      }
+    },
+    "android": {
+      "package": "com.team7llc.besteats",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Best Eats to use your location to find nearby restaurants."
+        }
+      ]
+    ]
+  }
+}
