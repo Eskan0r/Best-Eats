@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Platform, Image } from 'react-native';
 import { COLORS } from '../theme/colors';
 import { Logo } from '../components/Header';
 
@@ -21,9 +21,15 @@ export const LandingScreen = ({ navigation }) => {
           <Text key={i} style={[styles.star, pos]}>★</Text>
         ))}
 
-        {/* Plate logo emoji */}
+        {/* Plate logo image */}
         <View style={styles.plateLogo}>
-          <Text style={styles.plateEmoji}>🍽️</Text>
+          <Image
+            source={require('../../assets/besteatslogo.png')}
+            style={styles.plateImage}
+            resizeMode="contain"
+            accessible
+            accessibilityLabel="Best Eats Logo"
+          />
           <Text style={styles.plateLabel}>BEST EATS</Text>
         </View>
 
@@ -94,8 +100,10 @@ const styles = StyleSheet.create({
     borderColor: COLORS.warmGray,
     marginVertical: 32,
   },
-  plateEmoji: {
-    fontSize: 70,
+  plateImage: {
+    width: 90,
+    height: 90,
+    marginBottom: 4,
   },
   plateLabel: {
     color: COLORS.sage,
